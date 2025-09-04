@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FDFAF6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Main content wrapper to handle fixed header */
+.main-content {
+  padding-top: 80px; /* Height of header + some spacing */
+  min-height: calc(100vh - 80px);
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 70px; /* Smaller header height on mobile */
+    min-height: calc(100vh - 70px);
+  }
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure proper spacing for all page containers */
+.MuiContainer-root {
+  padding-top: 0 !important;
+}
+
+/* Fix for pages that might have their own top margin/padding */
+.page-container {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Import Notion Editor styles */
+@import './styles/NotionEditor.css';
+
+/* Additional global styles for better typography */
+* {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Selection color */
+::selection {
+  background-color: #3182ce40;
+  color: inherit;
+}
+
+/* Focus outline improvements */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #3182ce;
+  outline-offset: 2px;
+}
